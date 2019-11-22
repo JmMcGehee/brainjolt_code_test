@@ -38,7 +38,7 @@ const items = [
 //loop throught the array
 //on the array is completely looped through reset the slides array.
 
-//state can be a random number between 1-4
+//state can be a random number between 0-4
 
 const App = (props) => {
   const [activeIndex, setActiveIndex] = useState(0)
