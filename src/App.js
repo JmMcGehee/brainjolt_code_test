@@ -47,6 +47,7 @@ const App = (props) => {
   const [slidesLeft, setSlidesLeft] = useState([0,1,2,3,4])
 
   const randomIndex = () => {
+    if (slidesLeft === null) setSlidesLeft(slidesShown)
     let num = Math.floor(Math.random() * slidesLeft.length)
     console.log(num)
     slidesShown.push(slidesLeft[num])
