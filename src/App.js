@@ -47,7 +47,7 @@ const App = (props) => {
   const [slidesLeft, setSlidesLeft] = useState([0,1,2,3,4])
 
   const randomIndex = () => {
-    if (slidesLeft === null) setSlidesLeft(slidesShown)
+    if (slidesLeft.length <= 1) setSlidesLeft(slidesShown)
     let num = Math.floor(Math.random() * slidesLeft.length)
     console.log(num)
     slidesShown.push(slidesLeft[num])
@@ -81,10 +81,6 @@ const App = (props) => {
 
   return (
     <div className="App">
-      <h2 onClick={ randomIndex }>slidesShown</h2>
-      <p>{ slidesShown }</p>
-      <h2>slidesLeft</h2>
-      <p>{ slidesLeft }</p>
       <Navbar color="info">
         <NavbarBrand className="text-white">BrainJolt Code Test</NavbarBrand>
       </Navbar>
